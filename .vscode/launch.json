@@ -1,0 +1,62 @@
+{
+    "configurations": [
+        {
+            "cwd": "${fileDirname}",
+            "name": "Linux",
+            "program": "${fileDirname}/isPrime",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "args": [
+                "31.342",
+                "asdf",
+                "hello world"
+            ],
+            "setupCommands": [
+                {
+                    "ignoreFailures": true,
+                    "text": "-enable-pretty-printing",
+                    "description": "Enable pretty-printing"
+                }
+            ],
+            "request": "launch",
+            "type": "cppdbg",
+            "MIMode": "gdb",
+            "preLaunchTask": "unix compile"
+        },
+        {
+            "cwd": "${fileDirname}",
+            "name": "Windows",
+            "program": "${fileDirname}/isPrime",
+            "args": [
+                "31.342",
+                "asdf",
+                "hello world"
+            ],
+            "request": "launch",
+            "type": "cppdbg",
+            "preLaunchTask": "windows compile"
+        },
+				{
+					"cwd": "${fileDirname}",
+					"name": "Mac",
+					"program": "${fileDirname}/isPrime",
+					"miDebuggerPath": "/usr/local/bin/gdb",  // Homebrew GDB path
+					"args": [
+							"31.342",
+							"asdf",
+							"hello world"
+					],
+					"setupCommands": [
+							{
+									"ignoreFailures": true,
+									"text": "-enable-pretty-printing",
+									"description": "Enable pretty-printing"
+							}
+					],
+					"request": "launch",
+					"type": "cppdbg",
+					"MIMode": "gdb",
+					"preLaunchTask": "unix compile"
+			}
+    ],
+    "version": "0.2.0"
+}
