@@ -4,10 +4,10 @@ We will code an compile and debug a simple program that can tell us if a number 
 
 
 ```bash
-< ./isPrime.bin 16
+< ./isPrime 16
 > no
 
-< ./isPrime.bin 31
+< ./isPrime 31
 > yes
 ```
 
@@ -69,8 +69,8 @@ We first have to compile the program before we can run it.
 You can run the program in the terminal by typing `./lesson1/isPrime` and then entering a number.
 
 ```bash
-./lesson1/isPrime.bin 17
+./lesson1/isPrime 17
 > yes
-./lesson1/isPrime.bin 18
+./lesson1/isPrime 18
 > no
 ```

@@ -3,7 +3,7 @@
         {
             "cwd": "${workspaceFolder}",
             "name": "Linux",
-            "program": "${workspaceFolder}/lesson1/isPrime.bin",
+            "program": "${workspaceFolder}/lesson1/isPrime",
             "miDebuggerPath": "/usr/bin/gdb",
             "args": [
                 "31.342",
@@ -19,13 +19,13 @@
             ],
             "request": "launch",
             "type": "cppdbg",
-            "MIMode": "gdb",
-            "preLaunchTask": "unix compile"
+            "preLaunchTask": "unix compile",
+            "MIMode": "gdb"
         },
         {
             "cwd": "${workspaceFolder}",
             "name": "Windows",
-            "program": "${workspaceFolder}/lesson1/isPrime.bin",
+            "program": "${workspaceFolder}/lesson1/isPrime",
             "args": [
                 "31.342",
                 "asdf",
@@ -38,7 +38,7 @@
         {
             "cwd": "${workspaceFolder}",
             "name": "Mac",
-            "program": "${workspaceFolder}/lesson1/isPrime.bin",
+            "program": "${workspaceFolder}/lesson1/isPrime",
             "miDebuggerPath": "/usr/local/bin/gdb",
             "args": [
                 "31.342",
@@ -54,8 +54,8 @@
             ],
             "request": "launch",
             "type": "cppdbg",
-            "MIMode": "gdb",
-            "preLaunchTask": "unix compile"
+            "preLaunchTask": "unix compile",
+            "MIMode": "gdb"
         }
     ],
     "version": "0.2.0"
