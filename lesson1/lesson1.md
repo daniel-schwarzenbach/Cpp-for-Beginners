@@ -4,10 +4,10 @@ We will code an compile and debug a simple program that can tell us if a number 
 
 
 ```bash
-< ./isPrime.(bin/exe) 16
+< ./isPrime.bin 16
 > no
 
-< ./isPrime.(bin/exe) 31
+< ./isPrime.bin 31
 > yes
 ```
 
@@ -22,7 +22,7 @@ First of all we need to prepare our enviroment. The enviroment settings are stor
 To prepare the enviroment you can use the script by running it in the terminal or of VSCode.
 
 ```bash
-julia lesson1/prepare.jl
+julia ./lesson1/prepare_unix.jl
 ```
 
 ![](./pics/update_lauch.png)
@@ -41,6 +41,8 @@ To do that select first the file `lesson1/isPrime.cpp` file so that VSCode sees 
 Then eighter hit F5 or push the green play button in the debug tab to compile and debug the program.
 
 This will activate the launch task wich will first compile the program in a subtask and then run it in debug mode.
+
+If youre running Windows or MacOs you have to change the launch target!
 
 ![](./pics/Run.png)
 
@@ -67,8 +69,8 @@ We first have to compile the program before we can run it.
 You can run the program in the terminal by typing `./lesson1/isPrime` and then entering a number.
 
 ```bash
-./lesson1/isPrime 17
+./lesson1/isPrime.bin 17
 > yes
-./lesson1/isPrime 18
+./lesson1/isPrime.bin 18
 > no
 ```

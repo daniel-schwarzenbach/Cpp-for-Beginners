@@ -2,7 +2,7 @@
 
 C++ is a powerful programming language that is widely used for system/software development, game development, and performance-critical applications. This repository contains resources and examples to help beginners learn C++.
 
-This guide will help you set up your development environment and get started with C++ programming.
+This guide will help you set up your development environment and get started with C++ programming and Debuging.
 
 # Getting Started
 
@@ -61,14 +61,11 @@ git clone https://github.com/daniel-schwarzenbach/Cpp-for-Beginners.git <directo
 
 Then open up Visual Studio Code!
 
-In the left-top corner click on File -> Open Folder and select the folder you just cloned.
+In the left-top corner click on -> File -> Open Folder and select the folder you just cloned.
 
 ![Open Folder in VSCode](./docs/pics/open-folder.png)
 
-the Folder you just opened now has the following structure:
-
-
-hint: turn on autosave! > File > Auto Save
+*hint:* **turn on autosave!** click on -> File -> Auto Save
 
 
 ## C++ Extension
@@ -77,7 +74,7 @@ Next we want to install the c++ extenstion for VSCode:
 
 1. Go to the Extensions view by clicking the square icon on the sidebar or pressing `Ctrl+Shift+X`.
 2. In the search bar, type C++.
-3. Find the extension called C/C++ by Microsoft (it should have a blue icon with "C++" letters).
+3. Find the extension called C/C++ by Microsoft
 4. Click the Install button.
 
 I recomend the following extentions:
@@ -89,7 +86,12 @@ Julia
 
 ## Setting up the Debugger
 
-In the .vscode file we can define setting and tasks.
+In the .vscode file we can define lauches and tasks.
+
+In the `.vscode/tasks.json` file we define tasks to compile our code.
+In the `.vscode/launch.json` file we define how to launch and debug our code.
+
+From project to project these files might need to be adjusted. For that I have provided prepare scripts in each lesson folder that will adjust the paths and arguments in these files to fit the current lesson.
 
 
 Now you are ready for [Lesson 1](./lesson1/lesson1.md)
