@@ -10,7 +10,7 @@ function update_task(new_target::String)
   
   # update the "args" field of each configuration.
   for task ∈ parsed["tasks"]
-    task["command"] = "bash " * new_target
+    task["command"] = new_target
   end
 
   # Write the updated JSON back to the file with pretty printing

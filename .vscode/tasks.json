@@ -8,7 +8,7 @@
             "presentation": {
                 "reveal": "always"
             },
-            "command": "bash ./lesson1/compile.bat",
+            "command": "./lesson1/compile.bat",
             "args": [],
             "type": "shell",
             "group": {
@@ -20,9 +20,8 @@
             "label": "windows compile",
             "type": "shell",
             "command": "./lesson1/compile.bat",
-            "args": [
-            ],
-            "group":  {
+            "args": [],
+            "group": {
                 "kind": "build",
                 "isDefault": true
             },
@@ -30,7 +29,7 @@
                 "cwd": "${workspaceFolder}"
             },
             "presentation": {
-                "reveal":"always"
+                "reveal": "always"
             },
             "problemMatcher": "$msCompile"
         }

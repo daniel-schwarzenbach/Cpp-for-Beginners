@@ -18,49 +18,49 @@ _Z8is_primei:
 	.seh_stackalloc	48
 	.seh_endprologue
 	movl	%ecx, 16(%rbp)	 # number, number
- # .\lesson1\isPrime.cpp:18:   if (number < 2) {
+ # ./lesson1/isPrime.cpp:18:   if (number < 2) {
 	cmpl	$1, 16(%rbp)	 #, number
 	jg	.L2	 #,
- # .\lesson1\isPrime.cpp:19:     return false;
+ # ./lesson1/isPrime.cpp:19:     return false;
 	movl	$0, %eax	 #, _4
 	jmp	.L3	 #
 .L2:
- # .\lesson1\isPrime.cpp:22:   double sqrtNumber = std::sqrt(number);
+ # ./lesson1/isPrime.cpp:22:   double sqrtNumber = std::sqrt(number);
 	movl	16(%rbp), %eax	 # number, tmp102
 	movl	%eax, %ecx	 # tmp102,
 	call	_ZSt4sqrtIiEN9__gnu_cxx11__enable_ifIXsrSt12__is_integerIT_E7__valueEdE6__typeES3_	 #
 	movq	%xmm0, %rax	 #, tmp103
 	movq	%rax, -16(%rbp)	 # tmp103, sqrtNumber
- # .\lesson1\isPrime.cpp:23:   for (int i = 2; i <= sqrtNumber; i++) {
+ # ./lesson1/isPrime.cpp:23:   for (int i = 2; i <= sqrtNumber; i++) {
 	movl	$2, -4(%rbp)	 #, i
- # .\lesson1\isPrime.cpp:23:   for (int i = 2; i <= sqrtNumber; i++) {
+ # ./lesson1/isPrime.cpp:23:   for (int i = 2; i <= sqrtNumber; i++) {
 	jmp	.L4	 #
 .L6:
- # .\lesson1\isPrime.cpp:24:     if (number % i == 0) {
+ # ./lesson1/isPrime.cpp:24:     if (number % i == 0) {
 	movl	16(%rbp), %eax	 # number, tmp104
 	cltd
 	idivl	-4(%rbp)	 # i
 	movl	%edx, %eax	 # _1, _1
- # .\lesson1\isPrime.cpp:24:     if (number % i == 0) {
+ # ./lesson1/isPrime.cpp:24:     if (number % i == 0) {
 	testl	%eax, %eax	 # _1
 	jne	.L5	 #,
- # .\lesson1\isPrime.cpp:25:       return false; // Found a factor, so it's not prime
+ # ./lesson1/isPrime.cpp:25:       return false; // Found a factor, so it's not prime
 	movl	$0, %eax	 #, _4
 	jmp	.L3	 #
 .L5:
- # .\lesson1\isPrime.cpp:23:   for (int i = 2; i <= sqrtNumber; i++) {
+ # ./lesson1/isPrime.cpp:23:   for (int i = 2; i <= sqrtNumber; i++) {
 	addl	$1, -4(%rbp)	 #, i
 .L4:
- # .\lesson1\isPrime.cpp:23:   for (int i = 2; i <= sqrtNumber; i++) {
+ # ./lesson1/isPrime.cpp:23:   for (int i = 2; i <= sqrtNumber; i++) {
 	pxor	%xmm1, %xmm1	 # _2
 	cvtsi2sdl	-4(%rbp), %xmm1	 # i, _2
 	movsd	-16(%rbp), %xmm0	 # sqrtNumber, tmp107
 	comisd	%xmm1, %xmm0	 # _2, tmp107
 	jnb	.L6	 #,
- # .\lesson1\isPrime.cpp:28:   return true; // No factors found, so it is prime
+ # ./lesson1/isPrime.cpp:28:   return true; // No factors found, so it is prime
 	movl	$1, %eax	 #, _4
 .L3:
- # .\lesson1\isPrime.cpp:29: }
+ # ./lesson1/isPrime.cpp:29: }
 	addq	$48, %rsp	 #,
 	popq	%rbp	 #
 	ret	
@@ -89,78 +89,78 @@ main:
 	.seh_endprologue
 	movl	%ecx, 16(%rbp)	 # argsSize, argsSize
 	movq	%rdx, 24(%rbp)	 # args, args
- # .\lesson1\isPrime.cpp:54: int main(int argsSize, char *args[]) {
+ # ./lesson1/isPrime.cpp:54: int main(int argsSize, char *args[]) {
 	call	__main	 #
- # .\lesson1\isPrime.cpp:56:   if (argsSize < 2) {
+ # ./lesson1/isPrime.cpp:56:   if (argsSize < 2) {
 	cmpl	$1, 16(%rbp)	 #, argsSize
 	jg	.L8	 #,
- # .\lesson1\isPrime.cpp:57:     std::cerr << "Usage: " << args[0] << " <integer>" << std::endl;
+ # ./lesson1/isPrime.cpp:57:     std::cerr << "Usage: " << args[0] << " <integer>" << std::endl;
 	leaq	.LC0(%rip), %rdx	 #, tmp109
 	movq	.refptr._ZSt4cerr(%rip), %rax	 #, tmp110
 	movq	%rax, %rcx	 # tmp110,
 	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	 #
 	movq	%rax, %rcx	 #, _1
- # .\lesson1\isPrime.cpp:57:     std::cerr << "Usage: " << args[0] << " <integer>" << std::endl;
+ # ./lesson1/isPrime.cpp:57:     std::cerr << "Usage: " << args[0] << " <integer>" << std::endl;
 	movq	24(%rbp), %rax	 # args, tmp111
 	movq	(%rax), %rax	 # *args_13(D), _2
 	movq	%rax, %rdx	 # _2,
 	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	 #
 	movq	%rax, %rcx	 #, _3
- # .\lesson1\isPrime.cpp:57:     std::cerr << "Usage: " << args[0] << " <integer>" << std::endl;
+ # ./lesson1/isPrime.cpp:57:     std::cerr << "Usage: " << args[0] << " <integer>" << std::endl;
 	leaq	.LC1(%rip), %rax	 #, tmp112
 	movq	%rax, %rdx	 # tmp112,
 	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	 #
 	movq	%rax, %rcx	 #, _4
- # .\lesson1\isPrime.cpp:57:     std::cerr << "Usage: " << args[0] << " <integer>" << std::endl;
+ # ./lesson1/isPrime.cpp:57:     std::cerr << "Usage: " << args[0] << " <integer>" << std::endl;
 	movq	.refptr._ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_(%rip), %rax	 #, tmp113
 	movq	%rax, %rdx	 # tmp113,
 	call	_ZNSolsEPFRSoS_E	 #
- # .\lesson1\isPrime.cpp:58:     return 1; // Return 1 to indicate an error code
+ # ./lesson1/isPrime.cpp:58:     return 1; // Return 1 to indicate an error code
 	movl	$1, %eax	 #, _9
 	jmp	.L9	 #
 .L8:
- # .\lesson1\isPrime.cpp:61:   int number = std::atoi(args[1]);
+ # ./lesson1/isPrime.cpp:61:   int number = std::atoi(args[1]);
 	movq	24(%rbp), %rax	 # args, tmp114
 	addq	$8, %rax	 #, _5
- # .\lesson1\isPrime.cpp:61:   int number = std::atoi(args[1]);
+ # ./lesson1/isPrime.cpp:61:   int number = std::atoi(args[1]);
 	movq	(%rax), %rax	 # *_5, _6
 	movq	%rax, %rcx	 # _6,
 	call	atoi	 #
 	movl	%eax, -4(%rbp)	 # tmp115, number
- # .\lesson1\isPrime.cpp:63:   if (is_prime(number) /* call the function is_prime on number */) {
+ # ./lesson1/isPrime.cpp:63:   if (is_prime(number) /* call the function is_prime on number */) {
 	movl	-4(%rbp), %eax	 # number, tmp116
 	movl	%eax, %ecx	 # tmp116,
 	call	_Z8is_primei	 #
- # .\lesson1\isPrime.cpp:63:   if (is_prime(number) /* call the function is_prime on number */) {
+ # ./lesson1/isPrime.cpp:63:   if (is_prime(number) /* call the function is_prime on number */) {
 	testb	%al, %al	 # _18
 	je	.L10	 #,
- # .\lesson1\isPrime.cpp:64:     std::cout << "yes" << std::endl;
+ # ./lesson1/isPrime.cpp:64:     std::cout << "yes" << std::endl;
 	leaq	.LC2(%rip), %rdx	 #, tmp117
 	movq	.refptr._ZSt4cout(%rip), %rax	 #, tmp118
 	movq	%rax, %rcx	 # tmp118,
 	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	 #
 	movq	%rax, %rcx	 #, _7
- # .\lesson1\isPrime.cpp:64:     std::cout << "yes" << std::endl;
+ # ./lesson1/isPrime.cpp:64:     std::cout << "yes" << std::endl;
 	movq	.refptr._ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_(%rip), %rax	 #, tmp119
 	movq	%rax, %rdx	 # tmp119,
 	call	_ZNSolsEPFRSoS_E	 #
 	jmp	.L11	 #
 .L10:
- # .\lesson1\isPrime.cpp:66:     std::cout << "no" << std::endl;
+ # ./lesson1/isPrime.cpp:66:     std::cout << "no" << std::endl;
 	leaq	.LC3(%rip), %rdx	 #, tmp120
 	movq	.refptr._ZSt4cout(%rip), %rax	 #, tmp121
 	movq	%rax, %rcx	 # tmp121,
 	call	_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc	 #
 	movq	%rax, %rcx	 #, _8
- # .\lesson1\isPrime.cpp:66:     std::cout << "no" << std::endl;
+ # ./lesson1/isPrime.cpp:66:     std::cout << "no" << std::endl;
 	movq	.refptr._ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_(%rip), %rax	 #, tmp122
 	movq	%rax, %rdx	 # tmp122,
 	call	_ZNSolsEPFRSoS_E	 #
 .L11:
- # .\lesson1\isPrime.cpp:68:   return 0; // Return 0 to indicate successful execution
+ # ./lesson1/isPrime.cpp:68:   return 0; // Return 0 to indicate successful execution
 	movl	$0, %eax	 #, _9
 .L9:
- # .\lesson1\isPrime.cpp:69: }
+ # ./lesson1/isPrime.cpp:69: }
 	addq	$48, %rsp	 #,
 	popq	%rbp	 #
 	ret	
