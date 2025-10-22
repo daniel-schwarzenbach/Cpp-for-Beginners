@@ -29,34 +29,40 @@ choco --version
 
 Once Chocolatey is installed, you can install the required packages for C++ development:
 
-open a new PowerShell window and run the following commands:
+open a new PowerShell/Cmd Prompt window and run the following commands:
 
 
 ```powershell
 # install the compiler
 choco install mingw
 
-# install the debugger
-choco install mingw-gdb
-
-# install Visual Studio Code
-choco install vscode
-
 # install Git
 choco install git
 
 # install CMake
+choco install make
 choco install cmake
+```
+
+Install VSCode from the official website: [VSCode](https://code.visualstudio.com/)
+
+to install julia you want to use this code:
+
+```powershell
+winget install --name Julia --id 9NJNWW8PVKMN -e -s msstore
+```
+
+then verify the installation with:
+
+```powershell
+julia --version
 ```
 
 ### Verify the Installations
 
 ```powershell
-mingw32-gcc --version
-mingw32-g++ --version
-mingw32-gdb --version
 git --version
-code --version
+g++ --version
 gdb --version
 ```
 

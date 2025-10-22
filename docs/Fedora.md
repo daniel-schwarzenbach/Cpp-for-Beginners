@@ -15,8 +15,13 @@ sudo dnf install code
 sudo dnf install git
 
 # CMake
+sudo dnf install make
 sudo dnf install cmake
 ```
+
+Install VSCode from the official website: [VSCode](https://code.visualstudio.com/)
+
+Install Julia from the official website: [Julia](https://code.visualstudio.com/)
 
 ## 3. Verify the Installation
 

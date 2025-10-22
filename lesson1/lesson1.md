@@ -4,10 +4,10 @@ We will code an compile and debug a simple program that can tell us if a number 
 
 
 ```bash
-< ./isPrime 16
+< ./isPrime.(bin/exe) 16
 > no
 
-< ./isPrime 31
+< ./isPrime.(bin/exe) 31
 > yes
 ```
 

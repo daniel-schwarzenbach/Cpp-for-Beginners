@@ -30,7 +30,12 @@ brew install --cask visual-studio-code
 
 # CMake
 brew install cmake
+brew install cmake
 ```
+
+Install VSCode from the official website: [VSCode](https://code.visualstudio.com/)
+
+Install Julia from the official website: [Julia](https://code.visualstudio.com/)
 
 ## 3. Verify the Installation
 

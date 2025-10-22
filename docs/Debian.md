@@ -10,15 +10,15 @@ sudo apt install build-essential git
 # debugger
 sudo apt install gdb
 
-# install Visual Studio Code
-sudo apt install code
-
 # install Git
 sudo apt install git
 
 # install CMake
+sudo apt install make
 sudo apt install cmake
 ```
+
+Install VSCode from the official Website: 
 
 ## 3. Verify the Installation
 

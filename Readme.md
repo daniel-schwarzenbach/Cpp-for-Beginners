@@ -56,7 +56,7 @@ choose your operating system below to install the required tools for C++ develop
 Clone this repository to the `<directory>` where you want to store your C++ projects:
 
 ```bash
-git clone https://github.com/daniel-schwarzenbach/C++-for-Beginners.git <directory>
+git clone https://github.com/daniel-schwarzenbach/Cpp-for-Beginners.git <directory>
 ```
 
 Then open up Visual Studio Code!
@@ -68,6 +68,8 @@ In the left-top corner click on File -> Open Folder and select the folder you ju
 the Folder you just opened now has the following structure:
 
 
+hint: turn on autosave! > File > Auto Save
+
 
 ## C++ Extension
 
@@ -77,6 +79,13 @@ Next we want to install the c++ extenstion for VSCode:
 2. In the search bar, type C++.
 3. Find the extension called C/C++ by Microsoft (it should have a blue icon with "C++" letters).
 4. Click the Install button.
+
+I recomend the following extentions:
+````
+C/C++
+C/C++ Extension Pack
+Julia
+````
 
 ## Setting up the Debugger
 

@@ -3,7 +3,7 @@
         {
             "cwd": "${workspaceFolder}",
             "name": "Linux",
-            "program": "${workspaceFolder}/lesson1/isPrime",
+            "program": "${workspaceFolder}/lesson1/isPrime.exe",
             "miDebuggerPath": "/usr/bin/gdb",
             "args": [
                 "31.342",
@@ -25,7 +25,7 @@
         {
             "cwd": "${workspaceFolder}",
             "name": "Windows",
-            "program": "${workspaceFolder}/lesson1/isPrime",
+            "program": "${workspaceFolder}/lesson1/isPrime.exe",
             "args": [
                 "31.342",
                 "asdf",
@@ -38,7 +38,7 @@
         {
             "cwd": "${workspaceFolder}",
             "name": "Mac",
-            "program": "${workspaceFolder}/lesson1/isPrime",
+            "program": "${workspaceFolder}/lesson1/isPrime.exe",
             "miDebuggerPath": "/usr/local/bin/gdb",
             "args": [
                 "31.342",
