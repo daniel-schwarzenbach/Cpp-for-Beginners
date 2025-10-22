@@ -6,7 +6,7 @@ This guide will help you set up your development environment and get started wit
 
 # Getting Started
 
-Before we can start programming in C++, we need to install 5 things:
+Before we can start programming in C++, we need to install some other programs:
 
 ### 1. Package Manager (optional but recommended)
 
