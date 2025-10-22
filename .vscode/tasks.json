@@ -2,39 +2,37 @@
     "tasks": [
         {
             "label": "unix compile",
-            "type": "shell",
-            "command": "bash /lesson1/compile.sh",
-            "args": [
-            ],
-            "group":  {
-                "kind": "build",
-                "isDefault": true
-            },
             "options": {
                 "cwd": "${workspaceFolder}"
             },
             "presentation": {
-                "reveal":"always"
+                "reveal": "always"
+            },
+            "command": "bash ./lesson1/compile.sh",
+            "args": [],
+            "type": "shell",
+            "group": {
+                "kind": "build",
+                "isDefault": true
             }
         },
-				{
-					"label": "windows compile",
-					"type": "shell",
-					"command": "bash ./lesson1/compile.sh",
-					"args": [
-					],
-					"group":  {
-							"kind": "build",
-							"isDefault": true
-					},
-					"options": {
-							"cwd": "${workspaceFolder}"
-					},
-					"presentation": {
-							"reveal":"always"
-					},
-					"problemMatcher": "$msCompile"
-			}
+        {
+            "label": "windows compile",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "presentation": {
+                "reveal": "always"
+            },
+            "command": "bash ./lesson1/compile.sh",
+            "args": [],
+            "problemMatcher": "$msCompile",
+            "type": "shell",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
     ],
     "version": "2.0.0"
 }

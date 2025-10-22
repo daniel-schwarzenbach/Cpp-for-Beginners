@@ -55,7 +55,7 @@ int main(int argsSize, char *args[]) {
   // first we check if the user has provided an argument
   if (argsSize < 2) {
     std::cerr << "Usage: " << args[0] << " <integer>" << std::endl;
-    return 1; // Return 0 to indicate an error code
+    return 1; // Return 1 to indicate an error code
   }
   // now we convert the first argument to an integer
   int number = std::atoi(args[1]);
