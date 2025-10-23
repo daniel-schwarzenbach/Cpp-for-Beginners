@@ -19,23 +19,26 @@ altenatively, you can visit [Homebrew's official website](https://brew.sh/) for 
 # C++ Compiler and Tools
 brew install gcc
 
-# Debugger
-brew install gdb
-
 # Git
 brew install git
-
-# Visual Studio Code
-brew install --cask visual-studio-code
 
 # CMake
 brew install cmake
 brew install cmake
+
+# Debugger
+xcode-select --install
+# enable the use of the debugger
+sudo DevToolsSecurity --enable
 ```
 
 Install VSCode from the official website: [VSCode](https://code.visualstudio.com/)
 
 Install Julia from the official website: [Julia](https://code.visualstudio.com/)
+
+## Debugging with LLDB-MI on macOS
+
+
 
 ## 3. Verify the Installation
 

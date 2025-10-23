@@ -1,3 +1,6 @@
 *.exe
 *.s
 lesson?/*
+test/
+
+.vscode/settings.json

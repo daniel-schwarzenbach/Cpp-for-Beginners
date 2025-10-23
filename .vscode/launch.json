@@ -39,7 +39,6 @@
             "cwd": "${workspaceFolder}",
             "name": "Mac",
             "program": "${workspaceFolder}/lesson1/isPrime",
-            "miDebuggerPath": "/usr/local/bin/gdb",
             "args": [
                 "31.342",
                 "asdf",
@@ -53,9 +52,11 @@
                 }
             ],
             "request": "launch",
+						"stopAtEntry": false,
+						"environment": [],
+						"externalConsole": false,
             "type": "cppdbg",
             "preLaunchTask": "unix compile",
-            "MIMode": "gdb"
         }
     ],
     "version": "0.2.0"
