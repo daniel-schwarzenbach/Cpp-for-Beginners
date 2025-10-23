@@ -23,7 +23,7 @@ brew install gcc
 brew install git
 
 # CMake
-brew install cmake
+brew install make
 brew install cmake
 
 # Debugger
