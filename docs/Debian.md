@@ -18,7 +18,9 @@ sudo apt install make
 sudo apt install cmake
 ```
 
-Install VSCode from the official Website: 
+Install VSCode from the official website: [VSCode](https://code.visualstudio.com/)
+
+Install Julia from the official website: [Julia](https://julialang.org/install/)
 
 ## 3. Verify the Installation
 

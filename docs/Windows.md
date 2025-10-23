@@ -46,17 +46,7 @@ choco install cmake
 
 Install VSCode from the official website: [VSCode](https://code.visualstudio.com/)
 
-to install julia you want to use this code:
-
-```powershell
-winget install --name Julia --id 9NJNWW8PVKMN -e -s msstore
-```
-
-then verify the installation with:
-
-```powershell
-julia --version
-```
+Install Julia from the official website: [Julia](https://julialang.org/install/)
 
 ### Verify the Installations
 
