@@ -19,8 +19,8 @@
             ],
             "request": "launch",
             "type": "cppdbg",
-            "preLaunchTask": "unix compile",
-            "MIMode": "gdb"
+            "MIMode": "gdb",
+            "preLaunchTask": "unix compile"
         },
         {
             "cwd": "${workspaceFolder}",
@@ -36,14 +36,6 @@
             "preLaunchTask": "windows compile"
         },
         {
-            "cwd": "${workspaceFolder}",
-            "name": "Mac",
-            "program": "${workspaceFolder}/lesson1/isPrime",
-            "args": [
-                "31.342",
-                "asdf",
-                "hello world"
-            ],
             "setupCommands": [
                 {
                     "ignoreFailures": true,
@@ -52,11 +44,19 @@
                 }
             ],
             "request": "launch",
-						"stopAtEntry": false,
-						"environment": [],
-						"externalConsole": false,
+            "environment": [],
+            "cwd": "${workspaceFolder}",
+            "name": "Mac",
+            "program": "${workspaceFolder}/lesson1/isPrime",
+            "args": [
+                "31.342",
+                "asdf",
+                "hello world"
+            ],
+            "externalConsole": false,
+            "stopAtEntry": false,
             "type": "cppdbg",
-            "preLaunchTask": "unix compile",
+            "preLaunchTask": "unix compile"
         }
     ],
     "version": "0.2.0"
