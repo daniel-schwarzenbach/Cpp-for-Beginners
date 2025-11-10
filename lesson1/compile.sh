@@ -1,3 +1,7 @@
+dir=$(dirname "$0")
+program=${dir}/isPrime
+file=${program}.cpp
+
 ##  Create an Executable from C++ Source Code
 # g++: GNU C++ Compiler
 # -g3: Include debugging information
@@ -7,7 +11,4 @@
 # -pedantic: Issue all the warnings demanded by strict ISO C++
 # -O0: Disable optimizations
 # -o isPrime: Specify the output file name
-g++ -g3 -std=c++17 -Wall -Wextra -pedantic -O0 -o ./lesson1/isPrime ./lesson1/isPrime.cpp
-
-##  Also generate readable assembly
-g++ -S -fverbose-asm -std=c++17 -Wall -Wextra -pedantic -O0 -o ./lesson1/isPrime.s ./lesson1/isPrime.cpp
+g++ -g3 -std=c++17 -Wall -Wextra -pedantic -O0 -o $program $file
