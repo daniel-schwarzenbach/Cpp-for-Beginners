@@ -23,10 +23,10 @@ struct ChessBoard {
 				
 			}
 		}
-		copy(board[0], "RNBQKBNR");
-		copy(board[1], "PPPPPPPP");
-		copy(board[6], "pppppppp");
-		copy(board[7], "rnbqkbnr");
+		copy(board[0], "rnbqkbnr");
+		copy(board[1], "pppppppp");
+		copy(board[6], "PPPPPPPP");
+		copy(board[7], "RNBQKBNR");
 	}
 	
 	// define an access operator
