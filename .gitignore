@@ -1,6 +1,9 @@
 *.exe
 *.s
 lesson?/*
+!lesson?/*.*
+examples/??/*
+!examples/??/*.*
 test/
 
 .vscode/settings.json
