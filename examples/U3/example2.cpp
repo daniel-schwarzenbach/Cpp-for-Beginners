@@ -34,8 +34,8 @@ struct ChessBoard {
 
 	// access operator using chess coordinates
 	char& operator()(const char a, const char b) {
-		uint i1 = a - '1'; // row
-		uint i2 = b - 'a'; // column
+		uint i2 = a - 'a';  // row
+    uint i1 = b - '1';  // column
 		if (i1 >= 8 || i2 >= 8) {
 			string msg = string("Index out of bounds at: (") + string({a}) 
 					+ string(", ") + string({b}) + string(")");
@@ -46,8 +46,8 @@ struct ChessBoard {
 
 	// constant access operator using chess coordinates
 	char operator()(const char a, const char b) const {
-		uint i1 = a - '1'; // row
-		uint i2 = b - 'a'; // column
+		uint i2 = a - 'a';  // row
+    uint i1 = b - '1';  // column
 		if (i1 >= 8 || i2 >= 8) {
 			string msg = string("Index out of bounds at: (") + string({a}) 
 					+ string(", ") + string({b}) + string(")");
@@ -76,16 +76,16 @@ int main() {
   ChessBoard chessBoard;
 	try {
 		// set some pieces
-		chessBoard('3', 'g') = 'X';
-		chessBoard('4', 'c') = 'Y';
-		chessBoard('5','a') = 'Z';
-		char a = '6', b = 'b';
+		chessBoard('g', '3') = 'X';
+		chessBoard('c', '4') = 'Y';
+		chessBoard('a','5') = 'Z';
+		char a = 'b', b = '6';
 		chessBoard(a, b) = 'W';
 		// print the chess board
 		cout << chessBoard;
 		cout << endl;
 		// out of bounds
-		chessBoard('9', 'a') = 'E'; 
+		chessBoard('a', '9') = 'E'; 
 	}
 	// catch any exception 
 	catch (const std::exception& e) {
