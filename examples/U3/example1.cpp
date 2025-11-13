@@ -1,9 +1,9 @@
-#include <iostream>
 #include <cmath>
+#include <iostream>
 
-using std::string;
 using std::cout;
 using std::endl;
+using std::string;
 
 // define the dimensions of the plot
 constexpr int w = 66;
@@ -17,19 +17,18 @@ const double height = 2.0 * M_PI;
 const char symbol = '*';
 
 int main() {
-	double dh = height / (h-1);
-	double dw = width / (w-1);
-	// intialize x
-	double x = 0.0;
-	for (int i = 0; i < h; ++i) {
-		// plot sin
-		double y = std::sin(x) + 1;
-		int j = std::round(y / dw);
-		for (int k = 1; k < j; ++k) {
-			cout << ' ';
-		}
-		cout << symbol << endl;
-		x += dh;
-	}
+  double dh = height / (h - 1);
+  double dw = width / (w - 1);
+  // intialize x
+  double x = 0.0;
+  for (int i = 0; i < h; ++i) {
+    // plot sin
+    double y = std::sin(x) + 1;
+    int j = std::round(y / dw);
+    for (int k = 1; k < j; ++k) {
+      cout << ' ';
+    }
+    cout << symbol << endl;
+    x += dh;
+  }
 }
-

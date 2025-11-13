@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 
+// logical OR for "bit arrays"
 void logical_or(int* dest, const int* lhs, const int* rhs) {
 	// get the lenths of the bits
 	int lR = 0, lL = 0;
