@@ -38,6 +38,11 @@ pastMoves.push(currentMove);
 // get last element from the undo stack
 string lastMove = pastMoves.top();
 pastMoves.pop();
+char oldPiece = ' ';
+if (lastMove[3] == 'x') {
+  oldPiece = deadPieces.top();
+  deadPieces.pop();
+}
 ```
 
 # A3
@@ -61,3 +66,34 @@ Heap
     - compare with children and swap with the smaller one
     - if no children are smaller, stop
     - otherwise swap the elements and repeat
+
+
+# Macros
+
+> why
+< write differnt code for different systems.
+> write different code for different modes. Example: Debuging
+
+```cpp
+// declare a function
+void my_function();
+
+#ifdef Debug
+void my_functon() {
+  cout << "Hello Debug" << endl;
+}
+
+#else
+void my_function() {
+  cout << "Hello realese" << endl;
+}
+
+```
+include a debug flag eighter in the code:
+```cpp
+#define Debug
+```
+or when compiling
+```
+g++ -g -DDebug
+```
