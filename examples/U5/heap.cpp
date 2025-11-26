@@ -22,7 +22,7 @@ void print_vector(vector<int> const& v) {
   for (int i = 0; i < v.size(); ++i) {
     cout << v[i];
     if (i < v.size()-1) {
-      cout << ", ";
+      cout << ",";
     }
   }
 }
@@ -36,6 +36,7 @@ struct Heap {
   // todoo!
   void insert(int toInsert) {
     data.push_back(toInsert);
+    // TODO
   }
 
   // todoo!
@@ -44,6 +45,7 @@ struct Heap {
     int result = data[0];
     std::swap(data[0], data[data.size()-1]);
     data.pop_back();
+    // TODO
     return result;
   }
 
@@ -66,7 +68,7 @@ int main() {
         heap.insert(integer);
         heap.print();
       }
-      else if (operation == "extract" || operation == "e") {
+      else if (operation == "extract-min" || operation == "e") {
         heap.extract();
         heap.print();
       }

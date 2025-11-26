@@ -1,4 +1,4 @@
-# Hilfe?
+# Wo erhalte ich Hilfe?
 
 Email: daniel.2.schwarzenbach@uni-konstanz.de
 
@@ -28,6 +28,14 @@ a × b := [y*w - z*v, z*u - x*w, x*v - y*u]
 
 vector addition:
 a + b := [x + u, y + v, z + w]
+
+compile with:
+```bash
+g++ -c vec-calc.cpp
+g++ -c main.cxx
+g++ main.o vec-calc.o -o ./myProgram
+./myProgram
+```
 
 # A2
 
@@ -80,23 +88,26 @@ Heap
 
 # Macros
 
-> why
+> why?
 < write differnt code for different systems.
-> write different code for different modes. Example: Debuging
+< write different code for different modes. Example: Debuging
 
 ```cpp
 // declare a function
 void my_function();
 
 #ifdef Debug
+// define the function for debug mode
 void my_functon() {
   cout << "Hello Debug" << endl;
 }
 
 #else
+// define the function for release mode
 void my_function() {
   cout << "Hello realese" << endl;
 }
+#endif
 
 ```
 include a debug flag eighter in the code:
