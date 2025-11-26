@@ -6,7 +6,6 @@ lesson?/*
 !lesson?/Makefile
 !lesson?/*.*
 !lesson?/lib/
-lesson?/lib/*.a
 examples/??/*
 !examples/??/*.*
 test/
