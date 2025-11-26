@@ -7,5 +7,5 @@ include("../scripts/update_program.jl")
 include("../scripts/update_task.jl")
 
 update_launch_args(args)
-update_launch_program(path * "/" * "main")
+update_launch_program(path * "/" * "myProgram")
 update_task(path * "/compile.sh")

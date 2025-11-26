@@ -11,7 +11,7 @@ CXX := g++
 CXXFLAGS := -std=c++17 -Wall -Wextra -g3 -Ilib -Llib
 
 # Name of the final executable program
-TARGET := main
+TARGET := myProgram
 
 # List of source files (.cpp) that need to be compiled
 SRCS := main.cpp myFunction.cpp
