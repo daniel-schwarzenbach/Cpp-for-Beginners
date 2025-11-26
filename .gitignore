@@ -1,5 +1,7 @@
 *.exe
 *.s
+*.a
+*.so
 lesson?/*
 !lesson?/Makefile
 !lesson?/*.*

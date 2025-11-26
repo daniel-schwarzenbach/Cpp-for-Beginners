@@ -1,3 +1,11 @@
+# Hilfe?
+
+Email: daniel.2.schwarzenbach@uni-konstanz.de
+
+Discord: snell0208
+
+Forum auf Ilias
+
 # A1
 
 define this struct and functions
@@ -14,8 +22,10 @@ b = [u,v,w]
 
 scalar product:
 a ⋅ b := x*u + y*v + z*w
+
 cross product:
 a × b := [y*w - z*v, z*u - x*w, x*v - y*u]
+
 vector addition:
 a + b := [x + u, y + v, z + w]
 

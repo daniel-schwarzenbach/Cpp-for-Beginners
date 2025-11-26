@@ -3,9 +3,11 @@
 #include <functional>
 #include <vector>
 #include <tuple>
+#include <string>
 
 using std::tuple;
 using std::make_tuple;
+using std::string;
 
 namespace math {
 

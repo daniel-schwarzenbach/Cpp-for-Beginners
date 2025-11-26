@@ -9,7 +9,8 @@ AR       := ar
 # -g3        : Include maximum debugging information (level 3)
 # -Wall      : Enable all common warnings
 # -Wextra    : Enable extra warnings beyond -Wall
-CXXFLAGS := -std=c++17 -g3 -Wall -Wextra
+# -fPIC      : Generate position-independent code (required for shared libraries)
+CXXFLAGS := -std=c++17 -g3 -Wall -Wextra -fPIC
 
 # Directory containing source files (.cpp)
 SRCDIR   := src
@@ -17,8 +18,8 @@ SRCDIR   := src
 # Directory where object files (.o) will be placed
 OBJDIR   := build
 
-# Name of the static library to create
-TARGET   := libmath.a
+# Name of the shared library to create
+TARGET   := libmath.so
 
 # Find all .cpp files in the SRCDIR directory
 # $(wildcard pattern) expands to all files matching the pattern
@@ -40,14 +41,14 @@ DEPS    := $(OBJECTS:.o=.d)
 # This ensures a fresh build and clean workspace
 all: clean $(TARGET) cleanobjs
 
-# Rule to create the static library archive
+# Rule to create the shared library (.so)
 # $(TARGET) depends on all object files ($(OBJECTS))
 $(TARGET): $(OBJECTS)
-	# Create static library archive
-	# ar rcs: r=insert/replace, c=create archive, s=create index
-	# $@ is the target (libmath.a)
+	# Create shared library
+	# -shared: Create a shared library instead of executable
+	# $@ is the target (libmath.so)
 	# $^ are all prerequisites (all .o files)
-	$(AR) rcs $@ $^
+	$(CXX) -shared -o $@ $^
 
 # Pattern rule: how to build object files from source files
 # The | $(OBJDIR) is an "order-only prerequisite"

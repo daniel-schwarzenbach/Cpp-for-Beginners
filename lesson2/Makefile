@@ -21,10 +21,13 @@ SRCS := main.cpp myFunction.cpp
 # Example: main.cpp → main.o, myFunction.cpp → myFunction.o
 OBJS := $(SRCS:.cpp=.o)
 
-# Path to the static library file (used as a dependency to track changes)
-LIBMATH_FILE := lib/libmath.a
+# Path to the shared library file (used as a dependency to track changes)
+LIBMATH_FILE := lib/libmath.so
 # Linker flag for the math library
 LIBMATH := -lmath
+# Add runtime library path so the executable can find the .so
+# Use $ORIGIN to make it relative to the executable's location
+LDFLAGS := -Wl,-rpath,'$$ORIGIN/lib'
 
 # Default target when running 'make' with no arguments
 # Dependencies execute in order: clean → $(TARGET) → cleanobjs
@@ -39,7 +42,8 @@ $(TARGET): $(OBJS) $(LIBMATH_FILE)
 	# $@ is the target name (main)
 	# $(OBJS) expands to all object files
 	# $(LIBMATH) is the linker flag (-lmath)
-	$(CXX) $(CXXFLAGS) $(OBJS) -o $@ $(LIBMATH)
+	# $(LDFLAGS) adds runtime library path so .so can be found
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $@ $(LIBMATH) $(LDFLAGS)
 
 # Pattern rule: how to build any .o file from corresponding .cpp file
 # % is a wildcard that matches any filename
