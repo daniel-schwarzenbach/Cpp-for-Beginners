@@ -35,7 +35,7 @@ struct Heap {
   public:
   // todoo!
   void insert(int toInsert) {
-    data.push_back(toInsert);
+    data.emplace_back(toInsert);
     // TODO
   }
 

@@ -85,6 +85,9 @@ Heap
     - if no children are smaller, stop
     - otherwise swap the elements and repeat
 
+# How to build a C++ project with multiple files
+
+https://youtu.be/7fGB-hjc2Gc?si=W0ICiq1HnfdeEklh&t=2093
 
 # Macros
 
