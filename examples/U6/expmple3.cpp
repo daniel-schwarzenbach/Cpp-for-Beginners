@@ -35,6 +35,7 @@ void backtrack(u64 idx, const vector<int> &orginal_set,
   current.pop_back(); 
 }
 
+// Function to generate power set
 vector<vector<int>> P(const vector<int> &orginal_set) {
   vector<vector<int>> result {};
   vector<int> current = {};
