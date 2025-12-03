@@ -24,7 +24,7 @@ constexpr array<u64, MAX_FAC> factorials = make_factorials();
 
 u64 ultra_fast_fac(u64 n) {
   if (n >= (u64)MAX_FAC)
-    return -1;
+    return 0;
   return factorials[n];
 }
 
