@@ -16,7 +16,7 @@ using std::format;
 
 /**
 Prints a vector representing a binary heap as a tree structure.
-```md
+```
 example {1, 3, 2, 7, 6, 4}
 Output:
            1
