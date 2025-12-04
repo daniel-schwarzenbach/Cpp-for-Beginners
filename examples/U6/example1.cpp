@@ -22,7 +22,7 @@ struct complex {
   // output stream
   friend std::ostream &operator<<(std::ostream &os, complex const& c);
   // absolute value
-  double abs() const { return std::sqrt(real * real + imag * imag); }
+  double abs() const;
 };
 
 // cpp file content: definitions
@@ -57,6 +57,10 @@ bool complex::operator==(complex const& other) const {
 std::ostream &operator<<(std::ostream &os, complex const& c) {
   os << c.real << " + " << c.imag << "î";
   return os;
+}
+
+double complex::abs() const {
+  return std::sqrt(real * real + imag * imag);
 }
 
 // main.cxx file content
