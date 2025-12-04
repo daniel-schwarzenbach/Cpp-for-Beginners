@@ -1,4 +1,4 @@
-// hpp file content
+// hpp file content: mainly declarations
 #include <iostream>
 #include <cmath>
 
@@ -8,17 +8,24 @@ struct complex {
   // constructor
   complex(double r = 0.0, double i = 0.0);
 
-  // operator overloads
+  ///     operator overloads
+  // addition
   complex operator+(complex const& other) const;
+  // multiplication
   complex operator*(complex const& other) const;
+  // add and assign
   complex& operator+=(complex const& other);
+  // multiply and assign
   complex& operator*=(complex const& other);
+  // equality
   bool operator==(complex const& other) const;
+  // output stream
   friend std::ostream &operator<<(std::ostream &os, complex const& c);
+  // absolute value
   double abs() const { return std::sqrt(real * real + imag * imag); }
 };
 
-// cpp file content
+// cpp file content: definitions
 complex::complex(double r, double i) : real(r), imag(i) {}
 
 complex complex::operator+(complex const& other) const {
