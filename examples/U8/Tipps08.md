@@ -18,7 +18,7 @@ Things to do:
 1. Read chess moves from a file.
 2. Checking Pawn promotion.
 3. Pawn captures
-4. Check for check and checkmate.
+4. Check for check.
 5. Output invalid on invalid moves.
 
 Use `std::ifstream` to read from files. <https://en.cppreference.com/w/cpp/io/basic_ifstream.html>
