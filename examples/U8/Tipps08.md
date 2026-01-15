@@ -12,8 +12,14 @@ void sort_container(Container& container, CompareFn const& compare) {
 
 ## Exercise 3
 
-There are 3 things to do in this exercise:
-1. Include
+Use `debug.h` to print debug information. Complie with `-DDebug` flag.
+
+Things to do:
+1. Read chess moves from a file.
+2. Checking Pawn promotion.
+3. Pawn captures
+4. Check for check and checkmate.
+5. Output invalid on invalid moves.
 
 Use `std::ifstream` to read from files. <https://en.cppreference.com/w/cpp/io/basic_ifstream.html>
 
