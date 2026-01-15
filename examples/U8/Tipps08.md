@@ -31,3 +31,8 @@ bool is_check() {
   }
   return false; // king is not in check
 }
+```
+
+## Alte Kahoots:
+
+<https://daniel.schwarzenbach.dev/blog/computer-sience/constance/>
