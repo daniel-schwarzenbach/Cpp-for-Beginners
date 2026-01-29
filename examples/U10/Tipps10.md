@@ -111,3 +111,21 @@ bool can_black_counter(ChessBoard& chessBoard) {
   return false;
 }
 ```
+
+## Ex 3: Make your own Exception Class
+
+```cpp
+// header file
+class MyException : public std::exception {
+ public:
+  const char* what() const noexcept override { return "Hello World!"; }
+  static void assert(int id, size_t size);
+};
+
+// source file
+void MyException::assert(int id, size_t size) {
+  if (id < 1 || static_cast<size_t>(id) >= size) {
+    throw MyException();
+  }
+}
+```
